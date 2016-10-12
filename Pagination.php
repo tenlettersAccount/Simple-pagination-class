@@ -3,7 +3,7 @@
 
 class Pagination 
 {
-	private $_db;
+    private $_db;
     private $_page;
     private $_result;
     private $_total;
@@ -44,14 +44,14 @@ class Pagination
         if($this->_result->num_rows > 0){
             $row = $this->_result->fetch_array();
             do{
-				echo '<div class="content">
-					<p class="title">'.$row['title'].'</p>
-					</div>';
+		echo '<div class="content">
+			<p class="title">'.$row['title'].'</p>
+		     </div>';
             }while($row = $this->_result->fetch_array());
         }
     }
     
-	// pages links
+    // pages links
     public function page_links()
     {
 			// check if arrow back required 
